@@ -1,46 +1,181 @@
-<!DOCTYPE html>
-<html>
+<!-- <!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;900&display=swap" rel="stylesheet">
+    
     <style>
-        label {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            overflow: hidden;
+        }
+        #main{
+            display: flex;
+            background-color: yellow;
+            justify-content: end;
+            align-items: center;
+            margin: 10px 20px;
+            height: 100px;
+            /* width: 100vw; */
 
+        }
+        #textBar{
+            padding: 10px 15px;
+            background-color: pink;
+            position: absolute;
+            /* width: 100%; */
+            opacity: 0;
+            pointer-events: none; 
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+        }
+        #textarea{
+            margin: 0px 10px;
+            padding: 0px 20px;
+
+        }
+        #textarea input{
+            font-size: 15px;
+            width: 500px;
+
+            border: none;
+            background-color: transparent;
+            
+        }
+        /* #textarea input::placeholder{
+            vertical-align: center;
+            font-size: 15px;
+        } */
+        #textarea input:focus{
+            border: none;
+            outline: none;
+            box-shadow: none;
+            background-color: transparent;
+        }
+        #searchIcon{
+            position: relative;
+            /* background-color: orange; */
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #searchIcon:hover{
+            border-radius: 50%;
+            background-color: #F4F4F4;
+        }
+        #searchIcon i{
+            font-size: 20px;
+        }
+        #searchIcon:focus #textBar{
+            opacity: 1;
+            pointer-events: auto;
         }
     </style>
 </head>
 
 <body>
-    <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Input Demos</h1>
-    <form>
-        <label for="Email">Email?</label><br>
-        <input type="email" id="email" placeholder="email"><br>
-        <label for="Password">Password</label><br>
-        <input type="password" id="password" placeholder="password"><br>
-        <label for="gender">What is your Gender?</label><br>
-        <label for="male">Male</label>
-        <input type="radio" name="gender" id="male" value="male">
-        <label for="female">Female</label>
-        <input type="radio" name="gender" id="female" value="female">
-        <br>
-        <label for="color">What is your favourite color?</label><br>
-        <select name="color">
-            <option>--Select--</option>
-            <option value="red">Red</option>
-            <option value="yellow">Yellow</option>
-            <option value="blue">Blue</option>
-            <option value="green">Green</option>
-        </select><br>
-        <label for="feedback">What's on your mind</label><br>
-        <textarea style="height: 100px;width: 200px;" placeholder="Write your thoughts...." rows="5" cols="30">
-            </textarea><br>
-        <input type="submit" value="submit">
-    </form>
-    <div style="background-color: yellow; max-width: 300px;height: 300px;justify-content: center;align-items: center; display: flex;">
-        <p style="background-color: rebeccapurple;"> this is div tag.</p>
-        <p style="background-color: pink;">hello world</p>
+    <div id="main">
+        <div id="searchIcon">
+            <p><i class="fas fa-search searchIcon"></i></p>
+        </div>
+        <div id="textBar">
+            <div id="search">
+                <p><i class="fas fa-search searchIcon"></i></p>
+            </div>
+            <div id="textarea">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div id="multiply">
+                <p><i class="fas fa-multiply"></i></p>
+            </div>
+        </div>
     </div>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            padding: 50px;
+            background-color: #f2f2f2;
+        }
+
+        #searchContainer {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+        }
+
+        #searchIcon {
+            cursor: pointer;
+            color: #333;
+            font-size: 20px;
+        }
+
+        #searchInput {
+            width: 0;
+            opacity: 0;
+            padding: 0;
+            font-size: 14px;
+            border: none;
+            border-bottom: 2px solid #067bfd;
+            background: transparent;
+            transition: width 0.4s ease, opacity 0.4s ease, padding 0.3s ease;
+            outline: none;
+        }
+
+        #searchContainer.active #searchInput {
+            width: 200px;
+            opacity: 1;
+            padding: 5px 10px;
+            background-color: white;
+            border-radius: 4px;
+        }
+
+        #searchInput::placeholder {
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="searchContainer">
+        <i id="searchIcon" class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Search..." />
+    </div>
+
+    <script>
+        const searchIcon = document.getElementById("searchIcon");
+        const searchContainer = document.getElementById("searchContainer");
+
+        searchIcon.addEventListener("click", () => {
+            searchContainer.classList.toggle("active");
+        });
+    </script>
 </body>
 
 </html>
