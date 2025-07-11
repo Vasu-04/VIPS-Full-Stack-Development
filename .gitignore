@@ -1,0 +1,19 @@
+# Prevent large binary files
+*.mp4
+*.mkv
+*.mov
+*.avi
+*.zip
+*.exe
+*.iso
+
+# Optional: Node.js-related
+node_modules/
+.env
+
+# Optional: Python-related
+__pycache__/
+*.pyc
+
+# Optional: VS Code project settings
+.vscode/

@@ -173,9 +173,12 @@ body {
     color: #067BFD;
     font-weight: 600;
 }
-#docsDropdownDivLeft,#docsDropdownDivRight{
+
+#docsDropdownDivLeft,
+#docsDropdownDivRight {
     width: calc(100%/2);
 }
+
 #listItem:hover #docsDropdownDiv {
     opacity: 1;
     pointer-events: auto;
@@ -322,4 +325,103 @@ body {
 
 #imgTagCep {
     max-width: 100%;
+}
+
+#getInvolvedDiv {
+    justify-content: space-between;
+    margin: 100px 0px;
+    padding: 0px 70px;
+    display: flex;
+    gap: 70px;
+}
+
+#getInvolvedDivInfo {
+    /* width: calc(100% - 40px); */
+    padding-top: 130px;
+    font-family: 'Inter', sans-serif;
+}
+
+#getInvolvedDivInfo h3 {
+    color: #4A4A4A;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#getInvolvedDivInfo h2 {
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 70px;
+}
+
+#getInvolvedDivInfo p {
+    /* max-width: 100%; */
+    color: #4A4A4A;
+    margin-top: 30px;
+    margin-right: 100px;
+    /* font-weight: bold; */
+    font-size: 20px;
+    word-spacing: 1px;
+    line-height: 1.2;
+    letter-spacing: 0px;
+}
+
+#getInvolvedDivImage {
+    height: max-content;
+}
+
+#getInvolvedDivLink {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#getInvolvedDivLink button {
+    width: 200px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: white;
+    border: 1px solid #0468D7;
+    font-family: 'Inter', sans-serif;
+    color: #0468D7;
+    font-weight: bold;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+#getInvolvedDivLink button:hover {
+    background-color: #0468D7;
+    color: white;
+}
+
+#getInvolvedDivLink a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    align-items: center;
+    display: flex;
+}
+#getInvolvedDivLink a:hover{
+    cursor: pointer;
+}
+#getInvolvedDivLink a i {
+    padding-left: 5px;
+    transition: padding-left 1s ease;
+}
+
+#getInvolvedDivLink a:hover i {
+    padding-left: 10px;
+    
+}
+
+#getInvolvedDivImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#getInvolvedDivImage img{
+    width: 100%;
 }
