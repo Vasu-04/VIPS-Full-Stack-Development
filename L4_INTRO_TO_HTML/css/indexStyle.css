@@ -239,8 +239,6 @@ body {
     font-size: 14px;
 }
 
-#homePageBody {}
-
 #homeTextImage {
     display: flex;
     width: 100%;
@@ -294,6 +292,7 @@ body {
 }
 
 #CEP {
+    /* background-color: green; */
     display: flex;
     /* justify-content: space-between; */
     margin: 70px 50px;
@@ -402,9 +401,11 @@ body {
     align-items: center;
     display: flex;
 }
-#getInvolvedDivLink a:hover{
+
+#getInvolvedDivLink a:hover {
     cursor: pointer;
 }
+
 #getInvolvedDivLink a i {
     padding-left: 5px;
     transition: padding-left 1s ease;
@@ -412,74 +413,267 @@ body {
 
 #getInvolvedDivLink a:hover i {
     padding-left: 10px;
-    
+
 }
 
-#getInvolvedDivImage{
+#getInvolvedDivImage {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
-#getInvolvedDivImage img{
+#getInvolvedDivImage img {
     width: 100%;
 }
 
-#flutterConsultantDiv{
+#flutterConsultantDiv {
     display: flex;
     align-items: center;
     padding: 50px 40px;
     gap: 40px;
-    background: linear-gradient(to top right,#FCFCE2,#FCFCE2,#F5FBFE);
+    background: linear-gradient(to top right, #FCFCE2, #FCFCE2, #F5FBFE);
 }
 
-#flutterConsultantImage{
+#flutterConsultantImage {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 2000px;
 }
-#flutterConsultantImage img{
+
+#flutterConsultantImage img {
     width: 100%;
 }
 
-#flutterConsultantInfo{
+#flutterConsultantInfo {
     padding: 0px 50px 0px 140px;
 
 }
-#flutterConsultantInfo h3{
+
+#flutterConsultantInfo h3 {
     font-size: 20px;
     margin: 0px 0px 20px;
     font-weight: bold;
-    font-family: 'Inter',sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #4A4A4A;
 }
-#flutterConsultantInfo h2{
+
+#flutterConsultantInfo h2 {
     font-size: 60px;
     margin: 0px 0px 32px;
     color: black;
     font-weight: bold;
     line-height: 1;
     letter-spacing: 0px;
-    font-family: 'Inter',sans-serif;
+    font-family: 'Inter', sans-serif;
 }
-#flutterConsultantInfo p{
+
+#flutterConsultantInfo p {
     margin: 0px 0px 32px;
     font-size: 20px;
     color: #4A4A4A;
-    font-family: 'Inter',sans-serif;
+    font-family: 'Inter', sans-serif;
 
 }
-#flutterConsultantInfoBtn button{
+
+#flutterConsultantInfoBtn button {
     cursor: pointer;
     margin: 0px 0px 14px;
     padding: 10px 32px;
     color: white;
-    font-family: 'Inter',sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: #0468D7;
     border: 1px solid #0468D7;
     border-radius: 50px;
     font-size: 14px;
     font-weight: 600;
+}
+
+#gettingStarted {
+    width: 100%;
+    margin: 70px 0px;
+}
+
+#gettingStartedInternalDiv {
+    background-color: #042449;
+    background-image: url("../assets/getStartedBackgroundImage.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-size: 100% 100%; */
+    background-position: bottom right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 50px;
+    border-radius: 40px;
+}
+
+#gettingStartedInternalDivText {
+    margin: 70px 60px;
+    width: 100%;
+}
+
+#gettingStartedInternalDivText h2 {
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+#gettingStartedInternalDivText h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    padding: 10px 0px 30px 0px;
+}
+
+#gettingStartedInternalDivLink {
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+#gettingStartedInternalDivLink button {
+    width: 100px;
+    padding: 10px 0px;
+    border-radius: 50px;
+    background-color: white;
+    border: none;
+    /* border: 1px solid white; */
+    font-family: 'Inter', sans-serif;
+    color: #0468D7;
+    font-weight: bold;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+#gettingStartedInternalDivLink button:hover {
+    background-color: #0468D7;
+    color: white;
+}
+
+#gettingStartedInternalDivLink a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 13px;
+    color: white;
+    align-items: center;
+    word-spacing: -2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gettingStartedInternalDivLink a:hover {
+    cursor: pointer;
+}
+
+#gettingStartedInternalDivLink a i {
+    padding-left: 5px;
+    color: white;
+    transition: padding-left 1s ease;
+}
+
+#gettingStartedInternalDivLink a:hover i {
+    padding-left: 10px;
+
+}
+
+#footerDiv{
+    margin: 0px;
+    background-color: #F8F9FA;
+}
+
+#footerInternalDiv{
+    margin: 60px 50px 70px 50px;
+}
+
+#flutterContactFooter{
+    display: flex;
+}
+
+#flutterContactFooterList{
+    display: flex;
+}
+
+#footerContactDivLinks{
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#footerTncDiv{
+    margin: 30px 0px 0px 0px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    font-family: 'Inter',sans-serif;
+    font-size: 13px;
+    color: #4A4A4A;
+    width: 100%;
+}
+
+#footerTncDivText{
+    width: 800px;
+    display: flex;
+    line-height: 1.5;
+    word-spacing: 2.2px;
+    /* letter-spacing: 2.2px; */
+}
+
+#footerTncDivLink ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+#footerTncDivLink li{
+    padding: 0px 10px;
+}
+
+#footerTncDivLink a{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+#footerTncDivLink a:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
