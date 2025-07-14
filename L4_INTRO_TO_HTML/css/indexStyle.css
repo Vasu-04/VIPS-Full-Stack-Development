@@ -583,25 +583,76 @@ body {
 
 }
 
-#footerDiv{
+#footerDiv {
     margin: 0px;
     background-color: #F8F9FA;
+    display: flex;
+    width: 100%;
+
 }
 
-#footerInternalDiv{
+#footerInternalDiv {
     margin: 60px 50px 70px 50px;
+    width: 100%;
 }
 
-#flutterContactFooter{
+#footerContactDiv{
+    margin: 0px 0px 30px ;
+    
+}
+
+#flutterContactFooter {
+    justify-content: space-between;
     display: flex;
+    margin-bottom: 150px;
 }
 
-#flutterContactFooterList{
+#flutterContactFooterList {
     display: flex;
+    gap: 60px;
 }
 
-#footerContactDivLinks{
+#flutterContactFooterList div{
+    width: 150px;
+    text-align: left;
+    font-family: 'Inter',sans-serif;
+}
+
+#flutterContactFooterList h3{
+    font-size: 16px;
+    padding: 10px 0px;
+}
+
+#flutterContactFooterList ul{
+    list-style-type: none;
+}
+
+#flutterContactFooterList li{
+    padding: 5px 0px;
+    font-size: 16px;
+    color: #4A4A4A;
+}
+
+#flutterContactFooterList a:hover{
+    text-decoration: underline;
+}
+
+#footerContactDivLinks {
     display: flex;
+    max-width: fit-content;
+    gap: 20px;
+    color: #4A4A4A;
+    background-color: transparent;
+}
+
+#footerContactDivLinks a:hover{
+    cursor: pointer;
+}
+
+hr{
+    /* color: red; */
+    /* height: 10px;*/
+    border: solid #4A4A4A 1px;
 }
 
 
@@ -635,19 +686,18 @@ body {
 
 
 
-
-#footerTncDiv{
+#footerTncDiv {
     margin: 30px 0px 0px 0px;
     display: flex;
     align-items: start;
     justify-content: space-between;
-    font-family: 'Inter',sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 13px;
     color: #4A4A4A;
     width: 100%;
 }
 
-#footerTncDivText{
+#footerTncDivText {
     width: 800px;
     display: flex;
     line-height: 1.5;
@@ -655,17 +705,17 @@ body {
     /* letter-spacing: 2.2px; */
 }
 
-#footerTncDivLink ul{
+#footerTncDivLink ul {
     display: flex;
     list-style-type: none;
     justify-content: space-between;
 }
 
-#footerTncDivLink li{
+#footerTncDivLink li {
     padding: 0px 10px;
 }
 
-#footerTncDivLink a{
+#footerTncDivLink a {
     font-size: 14px;
     display: flex;
     align-items: center;
@@ -673,7 +723,7 @@ body {
     text-decoration: none;
 }
 
-#footerTncDivLink a:hover{
+#footerTncDivLink a:hover {
     text-decoration: underline;
     cursor: pointer;
 }
