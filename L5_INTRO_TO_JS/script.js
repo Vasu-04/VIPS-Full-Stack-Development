@@ -166,3 +166,96 @@ let divsArray = [...divs];
 
 // Array methods use kar sakte hain
 divsArray.forEach(div => console.log(div));
+
+
+//---------------------------------------------
+//Bracket Notation
+//---------------------------------------------
+
+//1. Dot Notation - doesn't access the class key with a whitespace in it
+//2. Bracket Notation - allow the object key to have a whitespace in it
+
+let obj1 = {
+    "First Name":"HImanshu",
+    age : 21
+}
+console.log(obj1["First Name"]) //- bracket Notation
+//console.log(obj1.First Name)    - dot Notation
+let key= "age"
+console.log(obj1[key])
+obj1.LastName = "Jindal"
+console.log(obj1)
+
+
+//---------------------------------------------
+//DATE & TIME
+//---------------------------------------------
+
+let date = new Date();
+console.log(date.getFullYear())
+
+
+//---------------------------------------------
+//MATH Functions
+//---------------------------------------------
+
+let x = 12.876543234554
+console.log(Math.floor(x)) //Floor - choping
+console.log(Math.ceil(x))  // Ceil - Round Off 
+console.log(Math.random()) //Random - generate a random integer b/w 0 and 1
+
+
+
+//---------------------------------------------
+//FOR....IN LOOP
+//---------------------------------------------
+
+let obj3 = {
+    name : "vasu",
+    age : 21
+}
+
+for(let i in obj3){
+    console.log(i + ":" + obj3[i])
+}
+
+//---------------------------------------------
+//Higher Order Functions
+//---------------------------------------------
+
+function parent(){ //function return
+    console.log("parent fucntion");
+    return child = function(){
+        console.log("Helo Hridya");
+    }
+}
+parent()()
+
+function parent (child){
+    child();
+}
+parent(function(){
+    console.log("Hello JAVASCRIPT");
+})
+
+//---------------------------------------------
+//Asynchronous fucntion
+//---------------------------------------------
+
+console.log("Hello");
+setTimeout(
+    function (){
+        console.log("World");
+    },3000
+)
+console.log("Good Afternoon");
+let a = setInterval(
+    function (){
+        console.log("World");
+    },3000
+)
+setTimeout(
+    function(){
+        console.log("bye");
+        clearInterval(a);
+},5000)
