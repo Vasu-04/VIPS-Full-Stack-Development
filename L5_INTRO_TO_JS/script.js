@@ -2,8 +2,8 @@
 //---------------------------------------------
 //Mutating Methods- the methods which returns a new array
 //---------------------------------------------
-/*
-let arr = [1, 2, 3];
+
+let arr = [1, 2, 50, , 3, 10, 4, -4, 5, 6, 7]
 
 // push() - End mein add karta hai
 arr.push(4); // [1, 2, 3, 4]
@@ -19,15 +19,12 @@ arr.shift(); // [1, 2, 3]
 
 // splice() - Add/remove elements at any position
 arr.splice(1, 1, 'new'); // [1, 'new', 3]
-*/
-
 
 
 //---------------------------------------------
 //Non-Mutating Methods - the methods which don't returns a new array
 //---------------------------------------------
-/*
-let arr = [1, 2, 3];
+
 
 // map() - Har element ko transform karta hai
 let doubled = arr.map(x => x * 2); // [2, 4, 6]
@@ -43,65 +40,63 @@ let part = arr.slice(1, 3); // [2, 3]
 
 // concat() - Arrays ko join karta hai
 let combined = arr.concat([4, 5]); // [1, 2, 3, 4, 5]
-*/
+
 
 
 //---------------------------------------------
 //Testing Methods
 //---------------------------------------------
-/*
-let arr = [2, 4, 6];
+
 
 // every() - Sabhi elements condition satisfy karte hain
 arr.every(x => x % 2 === 0); // true
 
 // some() - Koi ek element condition satisfy karta hai
 arr.some(x => x > 5); // true
-*/
 
-// let arr = [1, 2, 50, , 3, 10, 4, -4, 5, 6, 7]
+
 //Length of an Array
-// console.log(arr.length);
+console.log(arr.length);
 
 //---------------------------------------------
 //Filter Method
 //---------------------------------------------
-// function even(val){
-//     if(val%2==0) return val;
-// }
-// console.log(arr.filter(
-//     (value,index)=>even(value)
-// ))
+function even(val){
+    if(val%2==0) return val;
+}
+console.log(arr.filter(
+    (value,index)=>even(value)
+))
 
 //---------------------------------------------
 //Reduce Method - to find the sum of all elements of an array
 //---------------------------------------------
-// console.log(arr.reduce(
-//     (prev,curr)=>{
-//         console.log(prev + ":" + curr + ":" + (prev+curr));
-//         return prev+curr;
-//     }
-// ))
+console.log(arr.reduce(
+    (prev,curr)=>{
+        console.log(prev + ":" + curr + ":" + (prev+curr));
+        return prev+curr;
+    }
+))
 
 //---------------------------------------------
 //Reduce Method - to find the maximum value in an array
 //---------------------------------------------
-// console.log(arr.reduce(
-//     (prev,curr)=>{
-//         return Math.max(prev,curr);
-//     }
-// ))
+console.log(arr.reduce(
+    (prev,curr)=>{
+        return Math.max(prev,curr);
+    }
+))
 
 //---------------------------------------------
 //For Each Method - traverses using elements not indices
 //---------------------------------------------
-// console.log(arr.forEach(
-//     (val) => { return val }
-// )) //gives undefined because foreach doesn't return anything it is just used to iterate or performing some operations
+console.log(arr.forEach(
+    (val) => { return val }
+)) //gives undefined because foreach doesn't return anything it is just used to iterate or performing some operations
 
-// arr.forEach(
-//     (val)=>console.log(2*3.14*val)
-// )
+arr.forEach(
+    (val)=>console.log(2*3.14*val)
+)
 
 //---------------------------------------------
 //OBJECTS
@@ -122,7 +117,7 @@ let obj={
         console.log(this)
     }
 }
-// console.log("Hello " + obj.firstname + " " + obj.lastname)
+console.log("Hello " + obj.firstname + " " + obj.lastname)
 console.log(obj)
 console.log("Hello " + obj.firstname + " " + obj.lastname)
 {obj.func()}
@@ -140,13 +135,13 @@ obj.funThis()
 // - Existing values ko "spread" ya "expand" karta hai
 // - Array ka reference ni jaata
 //Example
-/*
+
 // Array elements ko spread karna
 let arr1 = [1, 2, 3];
 let arr2 = [4, 5, 6];
 
 // Arrays ko combine karna
-let combined = [...arr1, ...arr2]; // [1, 2, 3, 4, 5, 6]
+let combined1 = [...arr1, ...arr2]; // [1, 2, 3, 4, 5, 6]
 
 // Array ko copy karna (shallow copy)
 let copy = [...arr1]; // [1, 2, 3]
@@ -171,4 +166,3 @@ let divsArray = [...divs];
 
 // Array methods use kar sakte hain
 divsArray.forEach(div => console.log(div));
-*/
