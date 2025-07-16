@@ -207,7 +207,7 @@ console.log(Math.random()) //Random - generate a random integer b/w 0 and 1
 
 
 //---------------------------------------------
-//FOR....IN LOOP
+//FOR....IN LOOP - can work on both object(key/value) and array wagera - indexes
 //---------------------------------------------
 
 let obj3 = {
@@ -217,6 +217,18 @@ let obj3 = {
 
 for(let i in obj3){
     console.log(i + ":" + obj3[i])
+}
+
+//---------------------------------------------
+//FOR....OF LOOP - can work only on array and not on objects
+//---------------------------------------------
+let arr4 = ["abc","def"];
+let obj1 = {
+    "name":"himanshu",
+    "age":21
+}
+for (const element of obj1) {
+    console.log(element);
 }
 
 //---------------------------------------------
@@ -259,3 +271,18 @@ setTimeout(
         console.log("bye");
         clearInterval(a);
 },5000)
+
+
+//------------------------------------
+//Object Destructuring
+//------------------------------------
+//can use values of the object multiple times
+
+//------------------------------------
+//Immediately Invoked Function Expression
+//------------------------------------
+//An Immediately Invoked Function Expression (IIFE) is a JavaScript function that runs as soon as it's defined. It's a common pattern used to create a private scope and avoid polluting the global namespace.
+// Standard IIFE syntax
+(function() {
+    // code here
+})();

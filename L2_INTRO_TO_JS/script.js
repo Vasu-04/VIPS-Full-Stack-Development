@@ -30,6 +30,23 @@ for(var i=0;i<=3;i++){
 
 //Closure
 //--------
+//A closure is a fundamental JavaScript concept where an inner function has access to variables from its outer (enclosing) function's scope, even after the outer function has finished executing.
+
+function outerFunction(x) {
+    // This is the outer function's scope
+    
+    function innerFunction(y) {
+        // Inner function has access to outer function's variables
+        return x + y;
+    }
+    
+    return innerFunction;
+}
+
+const addFive = outerFunction(5);
+console.log(addFive(3)); // 8
+
+
 for(var a=0;a<=3;a++){
     function close(j){
         var i = j; //each function has its own scope whether for var or let or const variable
