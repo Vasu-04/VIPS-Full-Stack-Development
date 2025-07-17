@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    background: linear-gradient(to top,#3E6947,#C4E19F);
+    width: 100%;
+    height: 100%;
+}
+.MainDiv1{
+    
+    /* padding-left: 100px; */
+    position: relative;
+    /* background: linear-gradient(to top,#3E6947,#C4E19F); */
+    /* background-image: url("../Assets/Images/indexPageImage2.png");
+    background-repeat: no-repeat;
+    background-size: contain; */
+    height: 100%;
+    width: 100%;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    z-index: 1;
+}
+.sideBar{
+    position: absolute;
+    z-index: 90;
+    background-color: white;
+    left: 0px;
+    top: 30px;
+    box-shadow: 0px 0px 30px rgba(23, 23, 23, 0.792);
+    height: calc(100% - 60px);
+    width: 100px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    writing-mode:sideways-lr;
+    /* text-align: center; */
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sideBar h1{
+    font-size: 70px;
+    font-weight: 500;
+    font-family: 'poppins',sans-serif;
+}
+.sideBar p{
+    font-size: 20px;
+}
+.sideBar .formDiv{
+    display:none;
+    writing-mode:horizontal-tb;
+}
+.LeftDiv{
+    position: relative;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+    height: 100%;
+    max-width: fit-content;
+}
+.LeftDiv img{
+    height: 100%;
+    width: 500px;
+}
+.RightDiv{
+    background-color: orange;
+    height: 100%;
+    width: 100%;
+}
+.LightGreen{
+    height: calc(100% - 60px);
+    background-color: #C6E3A3
+}
+.DarkGreen{
+    height: 60px;
+    background-color: #346047;
+}
+.MainDiv2{
+    position: absolute;
+    height: calc(100% - 60px);
+    z-index: 90;
+    background-color: white;
+    /* margin: 30px 30px 30px 600px; */
+    /* left: 600px; */
+    right: 0px;
+    top: 30px;
+    width: calc(100% - 600px);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: 0px 0px 30px rgba(23, 23, 23, 0.792);
+    display: flex;
+    line-height: 1;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    writing-mode:horizontal-tb;
+}
+.MainDiv2 h1{
+    writing-mode:sideways-rl;
+    display: none;
+    font-size: 70px;
+    font-weight: 500;
+    font-family: 'poppins',sans-serif;
+}
+.MainDiv2 p{
+    writing-mode:sideways-rl;
+    display: none;
+    font-size: 20px;
+}
+.formDiv{
+    margin: 30px 50px;
+    /* background-color: pink; */
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formHeading{
+    padding: 10px 0px;
+    font-size: 60px;
+    font-family: 'Poppins',sans-serif;
+}
+
+.EmailField, .PasswordField, .ButtonField{
+    height: 40px;
+    /* background-color: yellow; */
+    width: 300px;
+    border-radius: 15px;
+    padding: 0px 20px;
+    border: 2px solid rgb(159, 159, 159);
+}
+.ButtonField{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    border:none;
+    background-color: #A3D95D;
+}
+.PasswordField{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.EmailField input, .PasswordField input{
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+    border-radius: 0px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    /* padding-left: 20px; */
+}
+.signInBtn{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+#eyeIcon{
+    color: rgb(159, 159, 159);
+}
+
+.sideBar:hover{
+    cursor: pointer;
+}
