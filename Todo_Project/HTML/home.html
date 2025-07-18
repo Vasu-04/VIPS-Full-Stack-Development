@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS-Styled To-Do List</title>
+</head>
+<body>
+  <div id="todo-app">
+    <h2>To-Do List</h2>
+    <input id="todo-input" type="text" placeholder="Add a new task" />
+    <button id="add-btn">Add</button>
+    <ul id="todo-list"></ul>
+  </div>
+  <script>
+    // Styling via JS
+    const app = document.getElementById('todo-app');
+    app.style.maxWidth = '400px';
+    app.style.margin = '40px auto';
+    app.style.padding = '20px';
+    app.style.border = '1px solid #ddd';
+    app.style.borderRadius = '8px';
+    app.style.background = '#fafafa';
+    app.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
+    app.querySelector('h2').style.textAlign = 'center';
+    app.querySelector('h2').style.color = '#2a7af2';
+
+    const input = document.getElementById('todo-input');
+    input.style.width = '65%';
+    input.style.padding = '7px';
+    input.style.marginRight = '10px';
+    input.style.border = '1px solid #ccc';
+    input.style.borderRadius = '5px';
+
+    const button = document.getElementById('add-btn');
+    button.style.padding = '7px 15px';
+    button.style.backgroundColor = '#2a7af2';
+    button.style.color = '#fff';
+    button.style.border = 'none';
+    button.style.borderRadius = '5px';
+    button.style.cursor = 'pointer';
+
+    const list = document.getElementById('todo-list');
+    list.style.listStyle = 'none';
+    list.style.padding = '0';
+    list.style.marginTop = '20px';
+
+    // To-Do list logic
+    button.onclick = function() {
+      const value = input.value.trim();
+      if (value === '') return;
+      const li = document.createElement('li');
+      li.textContent = value;
+      li.style.padding = '8px 10px';
+      li.style.marginBottom = '10px';
+      li.style.background = '#e3f0fc';
+      li.style.borderRadius = '4px';
+      li.style.display = 'flex';
+      li.style.justifyContent = 'space-between';
+      li.style.alignItems = 'center';
+      // Complete button
+      const doneBtn = document.createElement('button');
+      doneBtn.textContent = '✓';
+      doneBtn.style.background = '#41bb67';
+      doneBtn.style.border = 'none';
+      doneBtn.style.color = '#fff';
+      doneBtn.style.borderRadius = '50%';
+      doneBtn.style.width = '25px';
+      doneBtn.style.height = '25px';
+      doneBtn.style.cursor = 'pointer';
+      doneBtn.onclick = () => {
+        li.style.textDecoration = 'line-through';
+        li.style.opacity = '0.6';
+      };
+      // Remove button
+      const delBtn = document.createElement('button');
+      delBtn.textContent = '✗';
+      delBtn.style.background = '#ea5757';
+      delBtn.style.border = 'none';
+      delBtn.style.color = '#fff';
+      delBtn.style.borderRadius = '50%';
+      delBtn.style.width = '25px';
+      delBtn.style.height = '25px';
+      delBtn.style.marginLeft = '12px';
+      delBtn.style.cursor = 'pointer';
+      delBtn.onclick = () => list.removeChild(li);
+
+      const btns = document.createElement('div');
+      btns.append(doneBtn, delBtn);
+
+      li.append(btns);
+      list.appendChild(li);
+      input.value = '';
+      input.focus();
+    };
+    input.addEventListener('keyup', e => {
+      if (e.key === 'Enter') button.onclick();
+    });
+  </script>
+</body>
+</html>

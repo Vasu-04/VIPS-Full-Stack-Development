@@ -12,7 +12,10 @@ eyeIcon.addEventListener("click", () => {
     }
 })
 
-
+let signInBtn = document.querySelector(".signInBtn");
+signInBtn.addEventListener("click",()=>{
+    window.location.href = "../HTML/home.html"
+})
 let sideBar = document.querySelector(".sideBar");
 let sideBar_formDiv = document.querySelector(".sideBar .formDiv");
 let sideBar_formDiv_signInBtn = document.querySelector(".sideBar .formDiv .signInBtn");
