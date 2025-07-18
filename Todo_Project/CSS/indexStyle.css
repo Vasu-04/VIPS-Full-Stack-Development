@@ -1,15 +1,19 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-html, body{
-    background: linear-gradient(to top,#3E6947,#C4E19F);
+
+html,
+body {
+    background: linear-gradient(to top, #3E6947, #C4E19F);
+    overflow-x: hidden;
     width: 100%;
     height: 100%;
 }
-.MainDiv1{
-    
+
+.MainDiv1 {
+
     /* padding-left: 100px; */
     position: relative;
     /* background: linear-gradient(to top,#3E6947,#C4E19F); */
@@ -23,7 +27,8 @@ html, body{
     /* align-items: center; */
     z-index: 1;
 }
-.sideBar{
+
+.sideBar {
     position: absolute;
     z-index: 90;
     background-color: white;
@@ -34,7 +39,7 @@ html, body{
     width: 100px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    writing-mode:sideways-lr;
+    writing-mode: sideways-lr;
     /* text-align: center; */
     line-height: 1;
     display: flex;
@@ -42,20 +47,42 @@ html, body{
     justify-content: center;
     align-items: center;
 }
-.sideBar h1{
+
+.sideBar h1 {
+    position: absolute;
+    right: 25px;
     font-size: 70px;
     font-weight: 500;
-    font-family: 'poppins',sans-serif;
+    font-family: 'poppins', sans-serif;
 }
-.sideBar p{
+
+.sideBar p {
     font-size: 20px;
+    position: absolute;
+    right: 10px;
 }
-.sideBar .formDiv{
-    display:none;
+
+.sideBar .formDiv {
+    overflow: hidden;
+    position: absolute;
+    width: calc(100% - 100px);
+    height: calc(100% - 60px);
+    opacity: 0;
+    gap: 15px;
+    /* display:none; */
     /* background-color: pink; */
-    writing-mode:horizontal-tb;
+    writing-mode: horizontal-tb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.LeftDiv{
+
+.sideBar .formDiv .formHeading {
+    /* overflow: hidden; */
+}
+
+.LeftDiv {
     position: relative;
     left: 100px;
     display: flex;
@@ -65,25 +92,30 @@ html, body{
     height: 100%;
     max-width: fit-content;
 }
-.LeftDiv img{
+
+.LeftDiv img {
     border-radius: 30px;
     height: calc(100% - 60px);
     width: 500px;
 }
-.RightDiv{
+
+.RightDiv {
     background-color: orange;
     height: 100%;
     width: 100%;
 }
-.LightGreen{
+
+.LightGreen {
     height: calc(100% - 60px);
     background-color: #C6E3A3
 }
-.DarkGreen{
+
+.DarkGreen {
     height: 60px;
     background-color: #346047;
 }
-.MainDiv2{
+
+.MainDiv2 {
     position: absolute;
     height: calc(100% - 60px);
     z-index: 90;
@@ -101,36 +133,55 @@ html, body{
     /* flex-direction: column; */
     justify-content: center;
     align-items: center;
-    writing-mode:horizontal-tb;
+    writing-mode: horizontal-tb;
 }
-.MainDiv2 h1{
-    writing-mode:sideways-rl;
-    display: none;
+
+.MainDiv2 h1 {
+    position: absolute;
+    left: 25px;
+    opacity: 0;
+    writing-mode: sideways-rl;
+    /* display: none; */
     font-size: 70px;
     font-weight: 500;
-    font-family: 'poppins',sans-serif;
+    font-family: 'poppins', sans-serif;
 }
-.MainDiv2 p{
-    writing-mode:sideways-rl;
-    display: none;
+
+.MainDiv2 p {
+    position: absolute;
+    left: 10px;
+    opacity: 0;
+    writing-mode: sideways-rl;
+    /* display: none; */
     font-size: 20px;
 }
-.formDiv{
-    margin: 30px 50px;
-    /* background-color: pink; */
-    display: flex;
+
+.MainDiv2 .formDiv{
+    opacity: 1;
+    overflow: hidden;
+    opacity: 1;
     gap: 15px;
+    position: absolute;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.formHeading{
-    padding: 10px 0px;
-    font-size: 60px;
-    font-family: 'Poppins',sans-serif;
+    width: calc(100% - 100px);
+    height: calc(100% - 60px);
 }
 
-.EmailField, .PasswordField, .ButtonField{
+
+.formHeading {
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 60px;
+    font-family: 'Poppins', sans-serif;
+    width: 600px;
+}
+
+.EmailField,
+.PasswordField,
+.ButtonField {
     height: 40px;
     /* background-color: yellow; */
     width: 300px;
@@ -138,21 +189,25 @@ html, body{
     padding: 0px 20px;
     border: 2px solid rgb(159, 159, 159);
 }
-.ButtonField{
+
+.ButtonField {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0px;
-    border:none;
+    border: none;
     background-color: #A3D95D;
 }
-.PasswordField{
+
+.PasswordField {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
-.EmailField input, .PasswordField input{
+
+.EmailField input,
+.PasswordField input {
     width: 100%;
     height: 100%;
     box-shadow: none;
@@ -162,7 +217,8 @@ html, body{
     background-color: transparent;
     /* padding-left: 20px; */
 }
-.signInBtn{
+
+.signInBtn {
     width: 100%;
     height: 100%;
     border-radius: 15px;
@@ -171,10 +227,11 @@ html, body{
     background-color: transparent;
     cursor: pointer;
 }
-#eyeIcon{
+
+#eyeIcon {
     color: rgb(159, 159, 159);
 }
 
-.sideBar:hover{
+.sideBar:hover {
     cursor: pointer;
 }
