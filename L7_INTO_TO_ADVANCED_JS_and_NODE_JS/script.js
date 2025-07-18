@@ -1,14 +1,14 @@
-// let myBtn = document.querySelector(".myBtn");
-// myBtn.addEventListener("click",()=>{
-//     let parent = myBtn.parentElement
-//     console.log(parent)
-//     parent.style.height = "100px";
-//     parent.style.width = "100px"
-//     parent.style.backgroundColor = "red"
+let myBtn = document.querySelector(".myBtn");
+myBtn.addEventListener("click",()=>{
+    let parent = myBtn.parentElement
+    console.log(parent)
+    parent.style.height = "100px";
+    parent.style.width = "100px"
+    parent.style.backgroundColor = "red"
     
-// })
+})
 
-/*
+
 let list = document.querySelector(".list")
 list.addEventListener("click",()=>{
     // let list = document.querySelector(".list") //selects single element
@@ -33,7 +33,7 @@ list.addEventListener("click",()=>{
     
 })
 
-*/ 
+
 //Event Handling
 /*
 1. onClick
@@ -62,12 +62,18 @@ inp.addEventListener("mouseover",()=>{
 inp.addEventListener("mouseout",()=>{
     console.log("out from the input field")
 })
-inp.addEventListener("keyup",()=>{
+inp.addEventListener("keyup",(event)=>{ // event - event happened
     console.log("key released")
+    console.log(event.target.value) // event.target -> input field , event.target.value ->input field value
 })
 inp.addEventListener("keypress",()=>{
     console.log("key pressed")
 })
-inp.addEventListener("keydown",()=>{
+inp.addEventListener("keydown",(event)=>{
     console.log("key down")
 })
+
+
+
+
+
