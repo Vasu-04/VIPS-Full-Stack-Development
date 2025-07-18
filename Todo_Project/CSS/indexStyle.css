@@ -52,6 +52,7 @@ html, body{
 }
 .sideBar .formDiv{
     display:none;
+    /* background-color: pink; */
     writing-mode:horizontal-tb;
 }
 .LeftDiv{
@@ -60,12 +61,13 @@ html, body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: yellow;
+    /* background-color: yellow; */
     height: 100%;
     max-width: fit-content;
 }
 .LeftDiv img{
-    height: 100%;
+    border-radius: 30px;
+    height: calc(100% - 60px);
     width: 500px;
 }
 .RightDiv{

@@ -15,6 +15,7 @@ eyeIcon.addEventListener("click", () => {
 
 let sideBar = document.querySelector(".sideBar");
 let sideBar_formDiv = document.querySelector(".sideBar .formDiv");
+let sideBar_formDiv_signInBtn = document.querySelector(".sideBar .formDiv .signInBtn");
 let sideBar_formDiv_formHeading = document.querySelector(".sideBar .formDiv .formHeading");
 let sideBar_h1 = document.querySelector(".sideBar h1");
 let sideBar_p = document.querySelector(".sideBar p");
@@ -38,6 +39,8 @@ sideBar.addEventListener("click", () => {
     sideBar_p.style.display = "none";
     MainDiv2_h1.style.display = "block";
     MainDiv2_p.style.display = "block";
+    MainDiv2_p.innerHTML = "Sign In";
     MainDiv2_formDiv.style.display = "none";
+    sideBar_formDiv_signInBtn.innerHTML = "Create Account"
     // MainDiv2.setAttribute("style.writing-mode","sideways-rl");
 })
