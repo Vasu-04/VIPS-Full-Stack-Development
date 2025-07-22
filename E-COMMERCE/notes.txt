@@ -1,0 +1,23 @@
+MONGODB (data given in JSON format -> but stores in BSON(binary)) -> local storage
+
+SQL stores data in Tabular Form.
+
+MONGODB ATLAS -> cloud storage
+
+MONGOOSE -> package that helps in connection between node.js and database
+
+MONGO Database -> database -> collections -> documents
+
+Database Schema :-schema -> models
+
+
+SERVER SIDE RENDERING and CLIENT SIDE RENDERING
+
+CLIENT SIDE ->
+1. html is in frontend but data is coming from backend through API
+
+SERVER SIDE ->
+1. html and data both coming from server
+2. EJS -> syntax to write program of html and js together
+       -> template Engine created for server-side
+       -> npm i ejs (INSTALLATION)
