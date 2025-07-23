@@ -1,23 +1,100 @@
-html, body{
+html,
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    height: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 255, 0.607), rgba(128, 0, 128, 0.603));
 }
 
-nav{
-    height: 50px;
-    width: 100%;
-    background-color: red;
+nav {
+    color: white;
+    font-weight: bold;
     display: flex;
+    /* justify-content: center; */
     align-items: center;
-    padding: 5px 10px;
+    height: 50px;
+    padding: 10px;
+    background: linear-gradient(to right, blue, purple);
 }
 
-nav a{
+nav a {
     border-radius: 10px;
     text-decoration: none;
     color: white;
     font-weight: bold;
     padding: 5px 10px;
     border: 2px solid white;
+}
+
+.tileDiv {
+    display: flex;
+    gap: 20px;
+    margin: 30px 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.tile {
+    transition: box;
+    padding-top: 5px;
+    overflow: scroll;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+    height: 300px;
+    width: 300px;
+    border-radius: 40px;
+    background-color: white;
+    box-shadow: 2px 2px 10px rgb(92, 92, 92);
+}
+
+.tile:hover {
+    box-shadow: 2px 2px 15px rgb(70, 70, 70);
+}
+
+/* .tile{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+} */
+.tile img {
+    /* text-align: center; */
+    max-height: 150px;
+}
+
+.imageDiv {
+    border-radius: 40px;
+    max-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile h1,
+.tile h2,
+.tile h5,
+.tile p {
+    margin: 0;
+    padding: 3px 10px;
+}
+
+.tile a {
+    text-decoration: none;
+    color: black;
+}
+
+.tile h5 {
+    max-height: 25px;
+    font-size: 12px;
+    color: gray;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tile p {
+    font-size: 10px;
+    color: gray;
 }

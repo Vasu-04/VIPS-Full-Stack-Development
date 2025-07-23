@@ -13,7 +13,7 @@
         <h1>Add New Product</h1>
 
     </nav>
-    <form method="post" action="/product/add">
+    <form method="post" enctype="multipart/form-data" action="/product/add">
         <label for="title">Title :</label>
         <input placeholder="Enter Title" type="text" name="title"><br>
         <label for="description">Description :</label>
@@ -23,7 +23,7 @@
         <label for="price">Price :</label>
         <input placeholder="Enter price" type="text" name="price"><br>
         <label for="image">Image :</label>
-        <input type="file" name="image"><br>
+        <input type="file" name="image" accept="image"><br>
         <button class="btn" type="submit">Submit</button>
     </form>
     

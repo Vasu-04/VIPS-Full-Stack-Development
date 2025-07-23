@@ -21,3 +21,8 @@ SERVER SIDE ->
 2. EJS -> syntax to write program of html and js together
        -> template Engine created for server-side
        -> npm i ejs (INSTALLATION)
+
+MONGODB IMAGE STORAGE:-
+1. cloud storage (coudnary)
+2. image kit (easy)
+mongodob is just used to store the url of image and we need to first store it in external platform and the take the url from there
