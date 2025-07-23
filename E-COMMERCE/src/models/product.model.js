@@ -16,6 +16,9 @@ const productSchema = new mongoose.Schema({
     },
     image : {
         type : String
+    },
+    imageName : {
+        type : String
     }
 })
 // for the collection name mongo itself applies letter "s" at the end of collection name

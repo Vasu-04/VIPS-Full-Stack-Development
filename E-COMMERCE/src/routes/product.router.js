@@ -32,7 +32,8 @@ router.post("/add", upload.single("image"), async (req, res) => {
         description: description,
         category: category,
         price: price,
-        image : result.url
+        image : result.url,
+        imageName : result.name
     })
     await product.save()
     res.redirect("/")
