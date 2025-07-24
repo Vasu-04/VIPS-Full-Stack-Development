@@ -26,3 +26,12 @@ MONGODB IMAGE STORAGE:-
 1. cloud storage (coudnary)
 2. image kit (easy)
 mongodob is just used to store the url of image and we need to first store it in external platform and the take the url from there
+
+
+//bCrypt (package) to encrypt the password
+
+
+Authentication :- who are you ?
+Authorization :- have authority or not ?
+Validation :- data is valid or not
+Verifictaion :- code is ok or not

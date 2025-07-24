@@ -5,6 +5,11 @@ const multer = require("multer")
 const ImageKit = require("imagekit")
 const storage = multer.memoryStorage()
 const upload = multer({ storage: storage })
+
+router.use((req,res,next)=>{
+    req.name = "Router Middleware"
+    next()
+})
 router.get("/", (req, res) => {  // router for product GET request
     res.render("productForm.ejs")
 

@@ -1,0 +1,9 @@
+Middleware is like a guard of college who validates the coming student on the basis of their id card.
+
+so Middleware is a guard between client and server validating the requests and responses.
+types of Middleware
+1. application middleware - at app.js like app.use()
+2. route level - at specific route like product.router.js like router.use()
+3. third party middleware - at package installed by npm line npm morgan
+4. built-in middleware - express.json(), express.urlencoded(), express.static()
+5. Error Handling middleware - to handle the exceptions
