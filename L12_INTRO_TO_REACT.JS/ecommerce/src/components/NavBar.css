@@ -1,0 +1,23 @@
+nav{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+    background-color: pink;
+}
+
+.search input{
+    width: 500px;
+    padding: 5px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+}
+
+.right i{
+    font-size: 20px;
+    font-weight: bold
+}

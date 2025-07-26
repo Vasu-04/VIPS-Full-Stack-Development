@@ -3,6 +3,9 @@ const router = express.Router()
 const bcrypt = require("bcrypt")
 const userModel = require("../models/user.model")
 
+router.get("/",(req,res)=>{
+    res.render("logInScreen.ejs")
+})
 router.post("/register", async (req, res) => {
     const { username, email, password } = req.body
 

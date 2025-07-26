@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    User Home Screen 
+    <% for (let index = 0; index < products.length; index++) { %>
+        <% const element = products[index]; %>
+            <H1><%= element.title %></H1>
+    <% } %>
+</body>
+</html>
