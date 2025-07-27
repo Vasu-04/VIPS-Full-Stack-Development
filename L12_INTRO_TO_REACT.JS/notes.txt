@@ -1,5 +1,0 @@
-React is a library (has a lot of function), in js we have eval 
-React has reusable components , we create a function for the repeated portion and then we can simply import and call it
-virtual dom is the copy of original dom
-there are libraries to manage states
-declarative in nature

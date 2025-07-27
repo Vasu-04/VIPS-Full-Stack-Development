@@ -1,0 +1,46 @@
+1. React is a library (has a lot of function), in js we have eval 
+2. React has reusable components , we create a function for the repeated portion and then 3. we can simply import and call it
+4. virtual dom is the copy of original dom
+5. there are libraries to manage states
+6. declarative in nature
+
+
+
+App.jsx is the component to the main.jsx file  and main.jsx file is nothing but just simple a script file to the index.html and index .html is the main first file renders on the client browser
+
+CreateRoot lets you create a root which is used to render the components on the browser. It takes two parameters createroot(dom node , options)
+
+Functional component is a function that returns some HTML and to call a fucntional component we need to just write it in self-closing angle tag for eg. <App />
+
+
+JSX - Syntax extension for javascript - markup lang. html in javascript
+
+when you return any markup it should only return one markup tag, if oy don't want it then you can use react fragment means <> and </> tht would act as a root tag
+All Tgas should be close 
+
+
+FUNCTIONAL COMPONENTS :-
+1. fucntion returning some markup is functional component.
+2. functional component name should start with a capital letter
+
+
+Styling CSS-
+1. inline style (style = { {display:flex and so on...} })
+2. external style (import "file path")
+
+HOOKS :-
+1. when there is something change in UI like clicking on autton , typing something in textfield or input field, an event is occured and a new value is being generated and thus we can't store it in some variable. so, we need to use something called state management.The values stored in variables can be shown to the ui if the page is rerendered and and as we are not rerendering the page the value can't be displayed on the screen, so we use hooks
+Hooks always starts with the word use.... and useState returns an state value and a function to alter it.
+Hooks can only be called inside a fucntional component and not outside of it
+
+
+PROPS :-
+props is used to pass value from parent component to child component
+So how values are being passed ? we paased the common param to the child components from the parent components and all child component's callback function have internally a props parameter which store the arguments being passed to it in object format and thus we can destructure it either using bracket notation or dot notation.
+
+USESTATE();
+const [state,setState] = useState();
+the above syntax contains a single parameter of any type in useState function which is considered as the initial value of the state variable 
+
+Virtual DOM(Document Object Model) :-
+react creates a same copy of the dom and make changes into it whenever a state is change and the it is compare with real dom and renders only that part of the ui and this is called as Reconciliation using diffing algorithm.
