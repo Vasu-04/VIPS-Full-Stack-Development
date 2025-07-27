@@ -42,5 +42,10 @@ USESTATE();
 const [state,setState] = useState();
 the above syntax contains a single parameter of any type in useState function which is considered as the initial value of the state variable 
 
+USEREF();
+const ref = useRef("prakash")
+this react hook is used to store some values which is not required to be render on the view like the timeRef in stopwatch example, if we use a timerId as local variable then while rerendering the page , dom will re-initialize it to its original value , and thus value of the variable is gone. so to prevent it , we use useRef which returns me an object and it has a built in object property named as current and the parameter in the useRef method is optional and if given, then it is considered as the initial value to the current property like in useState.
+
+
 Virtual DOM(Document Object Model) :-
 react creates a same copy of the dom and make changes into it whenever a state is change and the it is compare with real dom and renders only that part of the ui and this is called as Reconciliation using diffing algorithm.
