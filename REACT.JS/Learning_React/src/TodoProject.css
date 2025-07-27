@@ -34,7 +34,31 @@
     border: none;
 }
 .wishlists{
+    color: white;
     display: flex;
     flex-direction: column;
     width: 300px;
+}
+.wishlists ul{
+    list-style-type: none;
+    padding: 0px;
+}
+.wishListItem{
+    width: 100%;
+    display: flex;
+    /* background-color: yellow; */
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+    gap: 10px;
+    margin: 5px 0px;
+    border-bottom: 1px solid gray;
+}
+.wishListItem p{
+    overflow-wrap:anywhere;
+    font-size: 20px;
+}
+.wishListItem div{
+    display: flex;
+    gap: 10px;
 }
