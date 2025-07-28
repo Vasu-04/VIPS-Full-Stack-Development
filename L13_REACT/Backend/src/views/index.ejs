@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+  </title>
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+
+  <nav>
+    <a href="/" id="home">Home</a>
+    <a href="/product">Add new Product</a>
+    <a href="user/register">register</a>
+    <a href="user/login">login</a>
+  </nav>
+
+
+    <div class="products">
+
+      <% products.forEach(elem=> {%>
+        <div class="product">
+          <div class="imgcontainer">
+            
+            
+            <img src="<%= elem.image%>" class="img">
+            
+          </div>
+          <h1 class="category">
+            <%= elem.category %>
+          </h1>
+          <h1 class="title">
+            <a href="/productDetails/<%= elem._id %>">
+              <%= elem.title %>
+            </a>
+          </h1>
+          
+          
+          
+          
+          <h1 class="price">
+            ₹<%= elem.price %>
+          </h1>
+          
+          
+          <h1 class="description">
+            <%= elem.description %>
+          </h1>
+          
+        </div>
+        <%}); %>
+      </div>
+        
+  
+
+</body>
+
+</html>

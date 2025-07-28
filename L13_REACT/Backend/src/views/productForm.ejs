@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Title</title>
+  <link rel="stylesheet" href="productForm.css">
+</head>
+
+<body>
+  <!-- Hello, world! -->
+  <nav>
+    <a href="/">Home</a>
+    <a href="/product" id="product">Add new product</a>
+
+  </nav>
+  <h1>
+
+    <div class="formcontainer">
+      <form action="/product/add" enctype="multipart/form-data" method="post">
+
+
+        <label for="title">Title</label>
+        <input type="text" placeholder="title" name="title">
+
+        <label for="Description">Description</label>
+        <input type="text" placeholder="Description" name="description">
+
+        <label for="Category">Category</label>
+        <input type="text" placeholder="Category" name="category">
+
+        <label for="Image">Image</label>
+        <input type="file" placeholder="Choose file" name="image">
+
+        <label for="Price">Price</label>
+        <input type="text" placeholder="Price" name="price">
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </h1>
+</body>
+
+</html>

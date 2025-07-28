@@ -1,0 +1,6 @@
+1. npm init y
+2. npm i <packages>
+3. Server.js and app.js setup and make src folder
+4. Routes
+5. Db
+6. Models

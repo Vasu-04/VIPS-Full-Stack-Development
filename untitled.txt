@@ -1,0 +1,5 @@
+id - 
+1033921657515-q83tiuok2onui3eudkd3s5r4pdlolojk.apps.googleusercontent.com
+
+secret - 
+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
