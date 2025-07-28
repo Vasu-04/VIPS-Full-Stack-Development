@@ -21,7 +21,7 @@ const UseRefHook = () => {
 
     const MyButton = forwardRef(
         (props,ref) => {
-            return <input placeholder='props.placeholder' ref={ref}></input>
+            return <input placeholder={props.placeholder} ref={ref}></input>
         }
     )
 

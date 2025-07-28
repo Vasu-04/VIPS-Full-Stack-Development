@@ -49,3 +49,22 @@ this react hook is used to store some values which is not required to be render 
 
 Virtual DOM(Document Object Model) :-
 react creates a same copy of the dom and make changes into it whenever a state is change and the it is compare with real dom and renders only that part of the ui and this is called as Reconciliation using diffing algorithm.
+
+
+
+React Router Dom :-
+1. install it using "npm i react-router-dom"
+2. in main.jsx import browserrouter from reactRouterDom
+3. in main.jsx file wrap <App/> inside browserrouter
+4. in app.jsx , import Routes and route and in div tag
+    <Routes>
+        <Route path = "/" element={<h1>home</h1>}/>
+        <Route path="/about" element={<h1>About Page</h1>}/>
+    </Routes>
+5. in NavBar.jsx import import {Link} from 'react-router-dom'
+6 . in Link tag create home and about , two Tgas
+7. inside tag give it an attribute "to="/"" for home button and "to="/products/add" for add new Product button
+8. craete a new folder inside src named as pages:
+9. inside this create a new file AddProducts.jsx and write a program to add product as it was in ejs 
+10. then in app.js import the folder import AddNewProduct from "./pages/AddNewProduct.jsx and under the routes tree create one more node         
+    <route path="/products/add" element={<AddNewProduct/>}/>
