@@ -1,0 +1,32 @@
+
+.main {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+
+.main button {
+    padding: 10px;
+
+}
+
+.roomForm {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+.room {
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: 800;
+    height: auto;
+    width: 100px;
+    margin-top: 5px;
+}
